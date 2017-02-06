@@ -5,7 +5,9 @@ I designed this image to run on a Synology Disk Station but it should run just f
 
 
 ## Run the image
-The image uses a  ```config.json ``` file that is located outside of the docker container. You can either use one from your local installation or the standard one.
+The image uses a  ```config file ``` file that is located outside of the docker container. You can either use one from your local installation or the standard one.
+
+Note: The name of the config file must be ```config-json-pimatic.json```
 
 Use the following  ```run ``` command to run the container:
 
