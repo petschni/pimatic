@@ -38,5 +38,5 @@ RUN update-rc.d pimatic defaults
 ####### Link the persistent config.json file and start the pimatic service #######
 CMD rm /home/pimatic-app/config.json && ln -s /home/pimatic-app/configMount/config-json-pimatic.json /home/pimatic-app/config.json && service pimatic start && bash
 
-# Expose port 1122
-EXPOSE 1122
+# Expose pimatic port e.g. 80
+EXPOSE 80
