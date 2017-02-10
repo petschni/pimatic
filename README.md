@@ -18,3 +18,5 @@ e.g.
  ```docker run -it -p 80:80 -v  ~/Documents/pimatic-app/:/home/pimatic-app/configMount/ dee4e2336b1236 ```
 
 This will start the container and the pimatic service.
+
+Detailed instructions for running pimatic on a Synology Disk Station see my blog: http://schnitzlers.de/2017/02/10/home-automation-with-pimatic-and-docker-on-my-synology/
