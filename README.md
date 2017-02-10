@@ -19,4 +19,4 @@ e.g.
 
 This will start the container and the pimatic service.
 
-Detailed instructions for running pimatic on a Synology Disk Station see my blog: http://schnitzlers.de/2017/02/10/home-automation-with-pimatic-and-docker-on-my-synology/
+Detailed instructions for running pimatic on a Synology Disk Station can be found on my: http://schnitzlers.de/2017/02/10/home-automation-with-pimatic-and-docker-on-my-synology/
