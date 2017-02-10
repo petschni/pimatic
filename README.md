@@ -1,5 +1,5 @@
 # Docker images for PIMATIC
-Docker container to run PIMATIC.
+Docker container to run [PIMATIC](https://pimatic.org).
 
 I designed this image to run on a Synology Disk Station but it should run just fine in any other Docker environment.
 
@@ -21,4 +21,4 @@ e.g.
 
 This will start the container and the pimatic service.
 
-Detailed instructions for running pimatic on a Synology Disk Station can be found on my: http://www.grauvoegel.de/2017/02/10/home-automation-with-pimatic-and-docker-on-my-synology/
+[Detailed instructions](http://www.grauvoegel.de/2017/02/10/home-automation-with-pimatic-and-docker-on-my-synology/) for running pimatic on a Synology Disk Station can be [found on my blog](http://www.grauvoegel.de/2017/02/10/home-automation-with-pimatic-and-docker-on-my-synology/). 
