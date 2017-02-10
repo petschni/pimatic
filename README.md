@@ -3,8 +3,10 @@ Docker container to run PIMATIC.
 
 I designed this image to run on a Synology Disk Station but it should run just fine in any other Docker environment.
 
+## Pull the image
+```docker pull petschni/pimatic```
 
-## Run the image
+## Run the container
 The image uses a  ```config file ``` file that is located outside of the docker container. You can either use one from your local installation or the standard one.
 
 Note: The name of the config file must be ```config-json-pimatic.json```
@@ -19,4 +21,4 @@ e.g.
 
 This will start the container and the pimatic service.
 
-Detailed instructions for running pimatic on a Synology Disk Station can be found on my: http://schnitzlers.de/2017/02/10/home-automation-with-pimatic-and-docker-on-my-synology/
+Detailed instructions for running pimatic on a Synology Disk Station can be found on my: http://www.grauvoegel.de/2017/02/10/home-automation-with-pimatic-and-docker-on-my-synology/
