@@ -3,21 +3,13 @@
 # Tested and designed for Synology Diskstation but should run in all docker environments.
 ##################################################################
 
-# We are using debian as the base image
-FROM debian
+# We are using nodeJS as the base image
+FROM node:7.6.0
 
 # Author
 MAINTAINER petschni
 
-####### Base installation of NodeJS #######
-# Install NodeJS v7.x
-RUN apt-get update
-RUN apt-get install -y curl wget
-RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
-RUN apt-get install -y nodejs
-
 ####### PIMATIC installaton #######
-RUN apt-get install -y build-essential git
 RUN mkdir /home/pimatic-app
 RUN /usr/bin/env node --version
 RUN cd /home && npm install pimatic --prefix pimatic-app --production
