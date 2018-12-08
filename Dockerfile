@@ -9,6 +9,11 @@ FROM node:7.6.0
 # Author
 MAINTAINER petschni
 
+####### dbus and avahi-daemon installation needed for hap plugin #######
+RUN apt-get update
+RUN apt-get -y install avahi-daemon avahi-discover libnss-mdns
+RUN apt-get -y install libavahi-compat-libdnssd-dev
+
 ####### PIMATIC installaton #######
 RUN mkdir /home/pimatic-app
 RUN /usr/bin/env node --version
@@ -27,8 +32,8 @@ RUN chmod +x /etc/init.d/pimatic
 RUN chown root:root /etc/init.d/pimatic
 RUN update-rc.d pimatic defaults
 
-####### Link the persistent config.json file and start the pimatic service #######
-CMD rm /home/pimatic-app/config.json && ln -s /home/pimatic-app/configMount/config-json-pimatic.json /home/pimatic-app/config.json && service pimatic start && bash
+####### Link the persistent config.json file and start the pimatic, dbus and avahi-daemon service #######
+CMD ["/bin/sh", "-c", "rm /home/pimatic-app/config.json && ln -s /home/pimatic-app/configMount/config-json-pimatic.json /home/pimatic-app/config.json && service dbus start && service avahi-daemon start && service pimatic start && bash"]
 
 # Expose pimatic port e.g. 80
 EXPOSE 80
